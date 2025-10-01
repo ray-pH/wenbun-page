@@ -1,0 +1,112 @@
+:root {
+    --wenbun-blue: #3E92CC;
+    --wenbun-green: #419E6F;
+    --wenbun-orange: #DA8C22;
+    --wenbun-red: #DB6B6C;
+}
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #E0E0E0;
+    font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.chinese-font {
+    font-family: 'Noto Sans SC', 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+input, select, textarea, button {
+    font-size: 0.8333333em; /* 14px/16px */
+    line-height: 1.2em;
+}
+input, select, textarea {
+    font-size: 1em;
+}
+
+.button {
+    all: unset;
+    color: white;
+    background-color: var(--wenbun-blue);
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &.invert {
+        border: var(--wenbun-blue) solid 1px;
+        background-color: #FFFFFF90;
+        color: var(--wenbun-blue);
+        &:hover {
+            background-color: lightgray;
+        }
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    &.disabled,
+    &:disabled {
+        background-color: gray;
+        pointer-events: none;
+    }
+}
+
+input:invalid,
+input.invalid {
+    background-color: var(--wenbun-red);
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 40em;
+    box-sizing: border-box;
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 5em;
+    gap: 3em;
+    
+    .left {
+        max-width: 20em;
+        flex-grow: 1;
+    }
+    .right {
+        /*margin-top: 3em;*/
+        flex-grow: 1;
+    }
+}
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 2em;
+    img {
+        width: 5em;
+    }
+    span {
+        font-size: 3em;
+        font-weight: bold;
+    }
+}
+
+.note {
+    color: #00000090;
+}
+.downloads .button {
+    justify-content: start;
+    padding-right: 2em;
+}
