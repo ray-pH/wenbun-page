@@ -94,6 +94,26 @@
                     </div>
                 </div>
             </div>
+        <div class="carousel">
+            <button class="nav left" id="scrollLeft">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="image-container" id="gallery">
+                <img src="./assets/app.wenbun.com_(13).png">
+                <img src="./assets/app.wenbun.com_(1).png">
+                <img src="./assets/app.wenbun.com_(6).png">
+                <img src="./assets/app.wenbun.com_(2).png">
+                <img src="./assets/app.wenbun.com_(3).png">
+                <img src="./assets/app.wenbun.com_(4).png">
+                <img src="./assets/app.wenbun.com_(5).png">
+                <img src="./assets/app.wenbun.com_(7).png">
+                <img src="./assets/app.wenbun.com_(9).png">
+            </div>
+
+            <button class="nav right" id="scrollRight">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
         <footer>
             <div class="footer-container">
@@ -101,5 +121,20 @@
                 <a href="https://app.wenbun.com/account">account deletion request</a>
             </div>
         </footer>
+    <script>
+        const gallery = document.getElementById("gallery");
+        const btnLeft = document.getElementById("scrollLeft");
+        const btnRight = document.getElementById("scrollRight");
+
+        const scrollAmount = 320; // image width + gap
+
+        btnLeft.addEventListener("click", () => {
+            gallery.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        });
+
+        btnRight.addEventListener("click", () => {
+            gallery.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    </script>
     </body>
 </html>
